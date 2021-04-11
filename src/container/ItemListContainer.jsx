@@ -3,7 +3,7 @@ import './ItemListContainer.css'
 
 const ItemListContainer = (props) => {
   return(
-    <p>Aqui estaran los productos de la tienda</p>
+    <p>{props.text}</p>
   )
 }
 
