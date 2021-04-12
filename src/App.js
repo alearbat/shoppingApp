@@ -9,7 +9,7 @@ function App() {
         <NavBar/>
       </header>
       <section className="App-container">
-        <ItemListContainer text={'Aqui estaran todos los productos de la tienda'}/>
+        <ItemListContainer greeting={'Bienvenidos a los productos de la tienda!'}/>
       </section>
     </div>
   );
