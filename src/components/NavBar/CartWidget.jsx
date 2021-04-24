@@ -1,6 +1,6 @@
 import React from 'react'
 import './NavBar.css';
-import logo from '../../images/shopping-cart.webp'
+import logo from '../../assets/shopping-cart.webp'
 
 const CartWidget = () => {
   return(

@@ -1,0 +1,32 @@
+.card {
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+  width: 18rem;
+  margin: 10px;
+  border: none;
+  border-radius: 20px; }
+  .card .card-body {
+    text-align: center;
+    margin-bottom: 0px; }
+  .card .btn {
+    background-color: green;
+    border: none; }
+  .card .btn:hover {
+    background-color: greenyellow; 
+  }
+
+.card-img-top {
+  width: 200px;
+  height: 200px;
+}
+
+.units {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.units button {
+  margin: 20px;
+}

@@ -1,4 +1,4 @@
-import './App.css';
+import './css/App.css';
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './container/ItemListContainer'
 
@@ -9,7 +9,8 @@ function App() {
         <NavBar/>
       </header>
       <section className="App-container">
-        <ItemListContainer greeting={'Bienvenidos a los productos de la tienda!'}/>
+        <h1>Nuestros productos</h1>
+        <ItemListContainer/>
       </section>
     </div>
   );

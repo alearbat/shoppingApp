@@ -1,11 +1,11 @@
 import React from 'react'
 import './NavBar.css'
-import logo from '../../images/plant-ar.jpg'
-import backgroundImage from '../../images/vertical2.jpg'
+import logo from '../../assets/plant-ar.jpg'
+import backgroundImage from '../../assets/vertical2.jpg'
 import CartWidget from './CartWidget'
 
 const NavBar = () => {
-  return(
+  return (
     <>
       <div>
         <img src={backgroundImage} alt="Vertical garden"/>
