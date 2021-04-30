@@ -1,0 +1,31 @@
+.card-detail {
+  background-color: white;
+  border-radius: 2em;
+  margin:20px;
+  padding:20px;
+}
+
+.image-product {
+  width: 400px;
+}
+
+.description {
+  font-size: 12px;
+  width: 300px;
+}
+
+button {
+  background-color: green;
+  color:white;
+  padding: 7px;
+  border: none;
+  border-radius: 5px; 
+}
+
+button:hover {
+  background-color: greenyellow; 
+}
+
+button:disabled {
+  background-color: lightslategrey;
+}

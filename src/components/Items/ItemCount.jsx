@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
+import '../../css/ItemCount.css'
 
 const ItemCount = ({stock}) => {
 
 const [stockTotal, setStockTotal] = useState(stock)
 const [unitsToBuy, setUnitsToBuy] = useState(1)
-
-let className = ""
 
 const sum = () => {
   if(stockTotal > 0) {

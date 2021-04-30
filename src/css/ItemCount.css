@@ -1,0 +1,24 @@
+.btn {
+  background-color: green;
+  color:white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px; }
+
+.card .btn:hover {
+  background-color: greenyellow; 
+}
+
+.card .btn:disabled {
+  background-color: lightslategrey;
+}
+
+.units {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.units button {
+  margin: 20px;
+}

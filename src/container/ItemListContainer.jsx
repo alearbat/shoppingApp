@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react'
+import { useParams } from 'react-router-dom'
 import ItemList from '../components/Items/ItemList.jsx'
 import '../css/ItemListContainer.css'
-import loader from '../assets/Spin.svg'
+import loader from '../assets/loader.png'
 
 const ItemListContainer = () => {
   const [arrayItems, setArrayItems] = useState([])
+  const {category} = useParams()
+  let itemsToShow = []
 
   useEffect(()=>{
     const products = [
@@ -12,90 +15,90 @@ const ItemListContainer = () => {
         "id" : 1,
         "code" : "P0001",
         "name" : "Aloe Vera",
-        "image" : "images/aloe_vera.webp",
+        "image" : "/images/aloe_vera.webp",
         "price" : 500,
         "stock" : 5,
-        "tags" : ["aloe vera", "suculenta"]
+        "category" : "suculenta"
       },{
         "id" : 2,
         "code" : "P0002",
         "name" : "Cactus",
-        "image" : "images/cactus.jpg",
+        "image" : "/images/cactus.jpg",
         "price" : 200,
         "stock" : 4,
-        "tags" : ["cactus", "suculenta"]
+        "category" : "suculenta"
       },{
         "id" : 3,
         "code" : "P0003",
         "name" : "Azalea",
-        "image" : "images/azalea.jpg",
+        "image" : "/images/azalea.jpg",
         "price" : 400,
         "stock" : 7,
-        "tags" : ["azalea", "flor"]
+        "category" : "flor"
       },{
         "id" : 4,
         "code" : "P0004",
         "name" : "Estrella Federal",
-        "image" : "images/estrella-federal.jpg",
+        "image" : "/images/estrella-federal.jpg",
         "price" : 450,
         "stock" : 3,
-        "tags"  : ["estrella federal", "flor"]
+        "category"  : "flor"
       },{
         "id" : 5,
         "code" : "P0005",
         "name" : "Alegria del hogar",
-        "image" : "images/Alegria.jpg",
+        "image" : "/images/Alegria.jpg",
         "price" : 450,
         "stock" : 4,
-        "tags"  : ["alegria del hogar", "flor"]
+        "category"  : "flor"
       },{
         "id" : 6,
         "code" : "P0006",
         "name" : "Cleistocactus",
-        "image" : "images/cleistocactus.jpg",
+        "image" : "/images/cleistocactus.jpg",
         "price" : 500,
         "stock" : 10,
-        "tags" : ["cactus", "suculenta"]
+        "category" : "suculenta"
       },{
         "id" : 7,
         "code" : "P0007",
         "name" : "Cleistocactus",
-        "image" : "images/cleistocactus2.jpg",
+        "image" : "/images/cleistocactus2.jpg",
         "price" : 600,
         "stock" : 4,
-        "tags" : ["cactus", "suculenta"]
+        "category" : "suculenta"
       },{
         "id" : 8,
         "code" : "P0008",
         "name" : "Cactus",
-        "image" : "images/claistocactus3.jpg",
+        "image" : "/images/claistocactus3.jpg",
         "price" : 550,
         "stock" : 12,
-        "tags" : ["cactus", "suculenta"]
+        "category" : "suculenta"
       },{
         "id" : 9,
         "code" : "P0009",
         "name" : "Astrophytum",
-        "image" : "images/astrophytum.jpg",
+        "image" : "/images/astrophytum.jpg",
         "price" : 450,
         "stock" : 2,
-        "tags" : ["cactus", "suculenta"]
+        "category" : "suculenta"
       },{
         "id" : 10,
         "code" : "P0010",
         "name" : "Lechuza",
-        "image" : "images/lechuza.jpg",
+        "image" : "/images/lechuza.jpg",
         "price" : 650,
         "stock" : 4,
-        "tags" : ["lechuza", "flor"]
+        "category" : "flor"
       },{
         "id" : 11,
         "code" : "P0011",
         "name" : "Perubeano",
-        "image" : "images/perubeano.jpg",
+        "image" : "/images/perubeano.jpg",
         "price" : 715,
         "stock" : 9,
-        "tags" : ["perubeano", "verde"]
+        "category" : "verde"
       }
     ]
   
@@ -116,13 +119,21 @@ const ItemListContainer = () => {
       console.log("El control ha finalizado")
     })
   },[])
-  
+
+    if (category) {
+      itemsToShow = arrayItems.filter(i => i.category === `${category}`)
+    } else {
+      itemsToShow = arrayItems
+    }
+
 
   return ( 
     <>
-      <div className="container">
-        <div className="row catalog-grid">
-          {arrayItems.length > 0 ? <ItemList products={arrayItems}/> : <img src={loader} className="loader"/>}
+      <div className="container-fluid">
+      <h1>Nuestras plantas</h1> 
+      <h2>Te invitamos a conocer nuestro catálogo de plantas disponibles.<br/>Todas nuestras plantas son cuidadas al detalle para que desplieguen su máximo potencial y tengan una larga vida.</h2>
+        <div className="row justify-content-center">
+           {itemsToShow.length > 0 ? <ItemList products={itemsToShow}/> : <img src={loader} className="loader" alt="Loading"/>}
         </div>
       </div>
     </>

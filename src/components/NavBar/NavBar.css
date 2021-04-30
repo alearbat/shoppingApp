@@ -3,25 +3,16 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.navbar {
-  margin: 5px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+a {
+  margin-left: 20px;
 }
 
-.navbar ul {
-  display: flex;
-  align-items: flex-end;
+#basic-nav-dropdown {
+ margin-left: 0px;
 }
 
-.navbar ul li {
-  margin: 15px;
-  list-style: none;
-}
-.navbar ul li a {
- display: flex;
- align-items: flex-end;
+.top-image {
+  width: 100%;
 }
 
 .cart {
