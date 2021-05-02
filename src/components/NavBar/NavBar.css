@@ -5,6 +5,8 @@
 
 a {
   margin-left: 20px;
+  text-decoration: none;
+  color: rgb(66, 66, 66);
 }
 
 #basic-nav-dropdown {
@@ -17,10 +19,4 @@ a {
 
 .cart {
   height: 30px;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(66, 66, 66);
-  
 }

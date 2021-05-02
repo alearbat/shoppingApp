@@ -5,6 +5,7 @@ import ItemListContainer from './container/ItemListContainer'
 import ItemDetailContainer from './container/ItemDetailContainer'
 import Home from './components/Home'
 import Footer from './components/Footer.jsx'
+import Services from './components/Services'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
             </section>
           </Route>
           <Route path="/servicios">
-            {/* <Servicies /> */}
+            <Services />
           </Route>
           <Route path="/contacto">
             {/* <Contact /> */}

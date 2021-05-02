@@ -1,0 +1,9 @@
+.service-bg {
+  background-image: url(../assets/green-bg2.png);
+  height: 350px;
+  color: white;
+}
+
+p {
+  font-size: 15px;
+}

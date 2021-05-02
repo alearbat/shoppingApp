@@ -2,7 +2,7 @@ import { React, useState } from 'react'
 import { Carousel } from 'react-bootstrap'
 import FirstSlide from '../assets/indoor-vertical-garden.jpg'
 import SecondSlide from '../assets/vertical-garden-window.jpg'
-import ThirdSlide from '../assets/vertical-garden-2.jpg'
+import ThirdSlide from '../assets/balcones.jpg'
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
