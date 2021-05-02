@@ -2,7 +2,7 @@
   height: 80px;
 }
 
-p {
-  margin-bottom: 0px;
+.footer__copyright {
   font-size: 10px;
+  margin-bottom: 0px;
 }

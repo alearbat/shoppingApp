@@ -1,9 +1,18 @@
 .service-bg {
   background-image: url(../assets/green-bg2.png);
-  height: 350px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 400px;
   color: white;
+  margin:0px;
 }
 
-p {
-  font-size: 15px;
+.title {
+  font-size: 25px;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.text {
+  font-size: 18px;
 }
