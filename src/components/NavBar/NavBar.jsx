@@ -5,6 +5,7 @@ import logo from '../../assets/plant-ar.jpg'
 import backgroundImage from '../../assets/vertical2.jpg'
 import CartWidget from './CartWidget'
 import { NavLink, Link } from 'react-router-dom'
+import {LinkContainer} from 'react-router-bootstrap'
 
 const NavBar = () => {
   return (
@@ -13,17 +14,27 @@ const NavBar = () => {
         <img src={backgroundImage} alt="Vertical garden" className="top-image"/>
       </div>
       <Navbar sticky="top" bg="white" expand="lg">
-        <Navbar.Brand href="/"><img src={logo} alt="Home"/></Navbar.Brand>
+        <LinkContainer to="/">
+          <Navbar.Brand><img src={logo} alt="Home"/></Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav className="mr-sm-2">
           <NavLink to={`/productos`}>PRODUCTOS</NavLink>
           <NavDropdown id="basic-nav-dropdown">
-            <NavDropdown.Item><Link to={`/productos`}>PRODUCTOS</Link></NavDropdown.Item>
+            <LinkContainer to="/productos">
+              <NavDropdown.Item>PRODUCTOS</NavDropdown.Item>
+            </LinkContainer>
             <NavDropdown.Divider />
-            <NavDropdown.Item><Link to={`/productos/suculenta`}>SUCULENTA</Link></NavDropdown.Item>
-            <NavDropdown.Item><Link to={`/productos/flor`}>FLORES</Link></NavDropdown.Item>
-            <NavDropdown.Item><Link to={`/productos/verde`}>VERDES</Link></NavDropdown.Item>
+            <LinkContainer to="/productos/suculenta">
+              <NavDropdown.Item>SUCULENTA</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/productos/flor">
+              <NavDropdown.Item>FLORES</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/productos/verde">
+              <NavDropdown.Item>VERDES</NavDropdown.Item>
+            </LinkContainer>
           </NavDropdown>
           <NavLink to={`/servicios`}>SERVICIOS</NavLink>
           <NavLink to={`/contacto`}>CONTACTO</NavLink>

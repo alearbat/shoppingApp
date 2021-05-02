@@ -130,12 +130,14 @@ const ItemListContainer = () => {
   return ( 
     <>
       <div className="container-fluid">
-      <h1>Nuestras plantas</h1> 
-      <h2>Te invitamos a conocer nuestro catálogo de plantas disponibles.<br/>Todas nuestras plantas son cuidadas al detalle para que desplieguen su máximo potencial y tengan una larga vida.</h2>
         <div className="row justify-content-center">
-           {itemsToShow.length > 0 ? <ItemList products={itemsToShow}/> : <img src={loader} className="loader" alt="Loading"/>}
+          <h1 className="title">NUESTRAS PLANTAS</h1> 
+          <h2>Te invitamos a conocer nuestro catálogo de plantas disponibles.<br/>Todas nuestras plantas son cuidadas al detalle para que desplieguen su máximo potencial y tengan una larga vida.</h2>
         </div>
-      </div>
+        <div className="row justify-content-center">
+            {itemsToShow.length > 0 ? <ItemList products={itemsToShow}/> : <img src={loader} className="loader" alt="Loading"/>}
+          </div>
+        </div>
     </>
   )
 }

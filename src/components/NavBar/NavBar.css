@@ -3,7 +3,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-a {
+.navbar-nav a {
   margin-left: 20px;
   text-decoration: none;
   color: rgb(66, 66, 66);
@@ -11,6 +11,16 @@ a {
 
 #basic-nav-dropdown {
  margin-left: 0px;
+ padding-top: 0px;
+}
+
+.dropdown-item {
+  padding:0px;
+}
+
+.dropdown-menu .active {
+ background-color: transparent;
+ color:green;
 }
 
 .top-image {
