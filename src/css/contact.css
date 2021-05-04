@@ -1,5 +1,16 @@
+.form__text {
+  font-size: 15px;
+}
+    
 .contact-bg {
-  background-image: url(../img/aloe-bg.jpg);
+  background-image: url(../assets/aloe-bg.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  padding: 20px; }
+  padding: 20px;
+} 
+
+.form-control {
+  background-color: rgb(219, 219, 219);
+  color: white;
+  border: none;
+}
