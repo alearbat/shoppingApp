@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ItemCount from './ItemCount'
+import ItemCountContainer from '../../container/ItemCountContainer'
 import '../../css/Item.css'
 
 const Item = ({ide, img, title, code, price, stock})=> {
@@ -13,7 +13,7 @@ const Item = ({ide, img, title, code, price, stock})=> {
         <div>{title}</div>
         <div>$ {price}</div>
         <div>
-          <ItemCount stock={stock}/>
+          <ItemCountContainer stock={stock}/>
         </div>
       </div>
     </>

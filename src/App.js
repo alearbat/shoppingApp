@@ -39,7 +39,9 @@ function App() {
             <Contact/>
           </Route>
           <Route path="/carrito">
-            {/* <Cart /> */}
+            <section className="App-container"> 
+              {/* <CartContainer/> */}
+            </section>
           </Route>
           <Route path="/"> {/* Como default al final para que caiga en home si hay un error*/}
             <Home />

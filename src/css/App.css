@@ -1,10 +1,11 @@
 .App {
   text-align: center;
-  padding-top: 20px;
 }
 
 .App-container {
   background-image: url(../assets/background_02.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .title {

@@ -3,7 +3,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.catalog-grid{
+.catalog-grid { 
   display: grid;
   grid-template-columns: 300px 300px 300px;
   grid-gap: 20px;
