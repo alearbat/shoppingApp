@@ -120,11 +120,11 @@ const ItemListContainer = () => {
     })
   },[])
 
-    if (category) {
-      itemsToShow = arrayItems.filter(i => i.category === `${category}`)
-    } else {
-      itemsToShow = arrayItems
-    }
+  category ?
+    itemsToShow = arrayItems.filter(i => i.category === `${category}`)
+    :
+    itemsToShow = arrayItems
+    
 
 
   return ( 

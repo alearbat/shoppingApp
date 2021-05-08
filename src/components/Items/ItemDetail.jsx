@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../css/ItemDetail.css'
-import ItemCount from './ItemCount'
+import ItemCountContainer from '../../container/ItemCountContainer'
 
 const ItemDetail = ({Item}) => {
   
@@ -12,7 +12,7 @@ const ItemDetail = ({Item}) => {
               <h2>{Item.code} - {Item.name}</h2>
               <p className="description">{Item.description}</p>
               <h2>$ {Item.price}</h2>
-              <ItemCount stock={Item.stock}/>
+              <ItemCountContainer stock={Item.stock}/>
             </div>
           </div>
     </>
