@@ -7,6 +7,8 @@ const ItemDetailContainer = () => {
 
   const [Item, setItem] = useState({})
   const {id} = useParams()
+  const [added, setAdded] = useState(false);
+
 
   useEffect(()=>{
     const products = [
@@ -126,15 +128,13 @@ const ItemDetailContainer = () => {
     })
   },[id])
 
-  console.log(Item)
-
   return ( 
     <>
       <div className="container-fluid">
-      <div className="row justify-content-center">
-          {Item && Item.id ? <ItemDetail Item={Item}/> : <img src={loader} className="loader" alt="Loading"/>}
+        <div className="row justify-content-center">
+            {Item && Item.id ? <ItemDetail Item={Item} added={added} setAdded={setAdded}/> : <img src={loader} className="loader" alt="Loading"/>}
+        </div>
       </div>
-    </div>
     </>
   )
 }

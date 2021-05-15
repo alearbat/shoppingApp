@@ -4,7 +4,7 @@ import './NavBar.css'
 import logo from '../../assets/plant-ar.jpg'
 import backgroundImage from '../../assets/vertical2.jpg'
 import CartWidget from './CartWidget'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import {LinkContainer} from 'react-router-bootstrap'
 
 const NavBar = () => {

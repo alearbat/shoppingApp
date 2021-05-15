@@ -2,7 +2,7 @@ import React from 'react'
 import '../../css/ItemDetail.css'
 import ItemCountContainer from '../../container/ItemCountContainer'
 
-const ItemDetail = ({Item}) => {
+const ItemDetail = ({Item, added, setAdded}) => {
   
   return(
     <>
@@ -12,7 +12,7 @@ const ItemDetail = ({Item}) => {
               <h2>{Item.code} - {Item.name}</h2>
               <p className="description">{Item.description}</p>
               <h2>$ {Item.price}</h2>
-              <ItemCountContainer stock={Item.stock}/>
+              <ItemCountContainer id={Item.id} stock={Item.stock} Item={Item} added={added} setAdded={setAdded}/>
             </div>
           </div>
     </>

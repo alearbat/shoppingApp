@@ -1,10 +1,14 @@
 import React, { useState , useEffect} from 'react'
 import ItemCount from '../components/Items/ItemCount'
+import { useShoppingCart } from '../context/cartContext'
+import { Link } from 'react-router-dom'
 
-const ItemCountContainer = ({stock}) => {
-  const [stockTotal, setStockTotal] = useState(stock)
+
+const ItemCountContainer = ({Item, added, setAdded = () => {}}) => {
+  const [stockTotal, setStockTotal] = useState(Item.stock)
   const [unitsToBuy, setUnitsToBuy] = useState(1)
   const [status, setStatus] = useState()
+  const { addItem } = useShoppingCart(); 
 
   const sum = () => {
     if(stockTotal > 0) {
@@ -21,7 +25,8 @@ const ItemCountContainer = ({stock}) => {
   }
 
   const onAdd = () => {
-    alert(`Has agregado ${unitsToBuy} unidades al carrito`)
+    addItem(Item, unitsToBuy)
+    setAdded(true)
   }
 
   useEffect(() => {
@@ -29,11 +34,11 @@ const ItemCountContainer = ({stock}) => {
       setStatus(`Solo quedan ${unitsToBuy} unidades en stock`)
       :
       setStatus('')
-  }, [stockTotal])
+  }, [stockTotal, unitsToBuy])
 
   return (
     <>
-      <ItemCount stockTotal={stockTotal} unitsToBuy={unitsToBuy} sum={sum} subtract={subtract} onAdd={onAdd} status={status}/>
+      { added ? <Link to={`/carrito`}><button>Finalizar Compra</button></Link> : <ItemCount stockTotal={stockTotal} unitsToBuy={unitsToBuy} sum={sum} subtract={subtract} status={status} onAdd={onAdd}/> }
     </>
   )
 }

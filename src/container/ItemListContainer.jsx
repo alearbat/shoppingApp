@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import ItemList from '../components/Items/ItemList.jsx'
 import '../css/ItemListContainer.css'
 import loader from '../assets/loader.png'
+//import {getFirestore} from ../
 
 const ItemListContainer = () => {
   const [arrayItems, setArrayItems] = useState([])
@@ -138,8 +139,8 @@ const ItemListContainer = () => {
         </div>
         <div className="row justify-content-center">
             {itemsToShow.length > 0 ? <ItemList products={itemsToShow}/> : <img src={loader} className="loader" alt="Loading"/>}
-          </div>
         </div>
+      </div>
     </>
   )
 }
