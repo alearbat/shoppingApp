@@ -1,5 +1,6 @@
 import React from 'react'
 import { useShoppingCart } from '../../context/cartContext';
+import '../../css/Cart.css'
 
 export const CartItem = (props) => {
 
@@ -8,14 +9,14 @@ export const CartItem = (props) => {
 
   return(
     <>
-      <div className="row card-detail d-flex align-items-center">
+      <div className="row d-flex align-items-center">
         <img className="image-product col-lg-2 col-md-2 col-sm-2 col-12" src={img} alt="Imagen del producto"/>
         <div className="col-lg-4 col-md-4 col-sm-4 col-12">
           <h2>{code} - {title}</h2>
         </div>
         <div className="col-lg-4 col-md-4 col-sm-4 col-12">
           <p>{qty}</p>
-          <button onClick={() => removeItems(id)}>Remove</button>
+          <button className="remove" onClick={() => removeItems(id)}>Remove</button>
         </div>
         <div className="col-lg-2 col-md-2 col-sm-2 col-12">
          <h2>$ {totalPrice(price, qty)}</h2>
