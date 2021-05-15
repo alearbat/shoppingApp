@@ -34,8 +34,5 @@ const CartListContainer = () => {
     </>
   )
 }
-// le borre al TOTAL y a totalprice style="display: none" style={"display: none"}
-
-// poner en style: clasName=={display: cartItems.length && "none"} ver si hay que ponerle || en lugar de &&
 
 export default CartListContainer
