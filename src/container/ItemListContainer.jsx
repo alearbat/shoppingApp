@@ -19,7 +19,8 @@ const ItemListContainer = () => {
         "image" : "/images/aloe_vera.webp",
         "price" : 500,
         "stock" : 5,
-        "category" : "suculenta"
+        "category" : "suculenta",
+        "description" : "Desde la antigüedad, diferentes pueblos y culturas han visto en el aloe vera una inagotable fuente de virtudes."
       },{
         "id" : 2,
         "code" : "P0002",
@@ -27,7 +28,8 @@ const ItemListContainer = () => {
         "image" : "/images/cactus.jpg",
         "price" : 200,
         "stock" : 4,
-        "category" : "suculenta"
+        "category" : "suculenta",
+        "description" : "Los cactus aguantan bien la sequía, pero como todas las plantas también necesitan agua para vivir. Conviene dejar que el sustrato se seque entre riego y riego."
       },{
         "id" : 3,
         "code" : "P0003",
@@ -59,7 +61,8 @@ const ItemListContainer = () => {
         "image" : "/images/cleistocactus.jpg",
         "price" : 500,
         "stock" : 10,
-        "category" : "suculenta"
+        "category" : "suculenta",
+        "description" : "Los cactus aguantan bien la sequía, pero como todas las plantas también necesitan agua para vivir. Conviene dejar que el sustrato se seque entre riego y riego."
       },{
         "id" : 7,
         "code" : "P0007",
@@ -67,7 +70,8 @@ const ItemListContainer = () => {
         "image" : "/images/cleistocactus2.jpg",
         "price" : 600,
         "stock" : 4,
-        "category" : "suculenta"
+        "category" : "suculenta",
+        "description" : "Los cactus aguantan bien la sequía, pero como todas las plantas también necesitan agua para vivir. Conviene dejar que el sustrato se seque entre riego y riego."
       },{
         "id" : 8,
         "code" : "P0008",
@@ -75,7 +79,8 @@ const ItemListContainer = () => {
         "image" : "/images/claistocactus3.jpg",
         "price" : 550,
         "stock" : 12,
-        "category" : "suculenta"
+        "category" : "suculenta",
+        "description" : "Los cactus aguantan bien la sequía, pero como todas las plantas también necesitan agua para vivir. Conviene dejar que el sustrato se seque entre riego y riego."
       },{
         "id" : 9,
         "code" : "P0009",
@@ -83,7 +88,8 @@ const ItemListContainer = () => {
         "image" : "/images/astrophytum.jpg",
         "price" : 450,
         "stock" : 2,
-        "category" : "suculenta"
+        "category" : "suculenta",
+        "description" : "Los cactus aguantan bien la sequía, pero como todas las plantas también necesitan agua para vivir. Conviene dejar que el sustrato se seque entre riego y riego."
       },{
         "id" : 10,
         "code" : "P0010",
