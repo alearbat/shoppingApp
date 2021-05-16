@@ -29,3 +29,7 @@ button:hover {
 button:disabled {
   background-color: lightslategrey;
 }
+
+.spinner {
+  margin: 100px;
+}

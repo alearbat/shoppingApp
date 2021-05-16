@@ -18,3 +18,7 @@ h2 {
   justify-content: center;
   align-self: center;
 }
+
+.spinner {
+  margin: 100px;
+}

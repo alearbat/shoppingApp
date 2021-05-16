@@ -38,7 +38,7 @@ const ItemCountContainer = ({Item, added, setAdded = () => {}}) => {
 
   return (
     <>
-      { added ? <Link to={`/carrito`}><button>Finalizar Compra</button></Link> : <ItemCount stockTotal={stockTotal} unitsToBuy={unitsToBuy} sum={sum} subtract={subtract} status={status} onAdd={onAdd}/> }
+      { added ? <Link to={`/carrito`}><button className="btn">Finalizar Compra</button></Link> : <ItemCount stockTotal={stockTotal} unitsToBuy={unitsToBuy} sum={sum} subtract={subtract} status={status} onAdd={onAdd}/> }
     </>
   )
 }

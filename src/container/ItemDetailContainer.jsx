@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import ItemDetail from '../components/Items/ItemDetail.jsx'
-import loader from '../assets/loader.png'
+import { Spinner } from 'react-bootstrap'
 
 const ItemDetailContainer = () => {
 
@@ -37,7 +37,8 @@ const ItemDetailContainer = () => {
         "image" : "/images/azalea.jpg",
         "price" : 400,
         "stock" : 7,
-        "category" : "flor"
+        "category" : "flor",
+        "description" : "Las azaleas florecen en primavera, y a menudo sus flores duran varias semanas. Toleran la sombra, prefieren vivir cerca o debajo de los árboles."
       },{
         "id" : 4,
         "code" : "P0004",
@@ -45,7 +46,8 @@ const ItemDetailContainer = () => {
         "image" : "/images/estrella-federal.jpg",
         "price" : 450,
         "stock" : 3,
-        "category"  : "flor"
+        "category"  : "flor",
+        "description" : "Se puede cultivar tanto en el interior de la casa como en el jardín o el patio (donde puede alcanzar los 5 metros de altura). Cuando se planta en el exterior, debe elegirse un sitio con buena iluminación, no expuesto a las corrientes de aire ni a los cambios bruscos de temperatura. No se recomienda su colocación en jardines cuando en la zona se registran heladas frecuentes."
       },{
         "id" : 5,
         "code" : "P0005",
@@ -53,7 +55,8 @@ const ItemDetailContainer = () => {
         "image" : "/images/Alegria.jpg",
         "price" : 450,
         "stock" : 4,
-        "category"  : "flor"
+        "category"  : "flor",
+        "description" : "Necesita desde sol pleno a semisombra y no tolera el frío. El riego debe ser abundante, siempre por la mañana temprano o el atardecer sin mojar las flores ni las hojas, y es bueno fertilizar con frecuencia."
       },{
         "id" : 6,
         "code" : "P0006",
@@ -132,7 +135,7 @@ const ItemDetailContainer = () => {
     <>
       <div className="container-fluid">
         <div className="row justify-content-center">
-            {Item && Item.id ? <ItemDetail Item={Item} added={added} setAdded={setAdded}/> : <img src={loader} className="loader" alt="Loading"/>}
+            {Item && Item.id ? <ItemDetail Item={Item} added={added} setAdded={setAdded}/> : <Spinner className="spinner" animation="border" variant="success" />}
         </div>
       </div>
     </>

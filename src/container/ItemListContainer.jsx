@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from '../components/Items/ItemList.jsx'
 import '../css/ItemListContainer.css'
-import loader from '../assets/loader.png'
+import { Spinner } from 'react-bootstrap'
 //import {getFirestore} from ../
 
 const ItemListContainer = () => {
@@ -144,7 +144,7 @@ const ItemListContainer = () => {
           </div>
         </div>
         <div className="row justify-content-center">
-            {itemsToShow.length > 0 ? <ItemList products={itemsToShow}/> : <img src={loader} className="loader" alt="Loading"/>}
+            {itemsToShow.length > 0 ? <ItemList products={itemsToShow}/> : <Spinner className="spinner" animation="border" variant="success" />}
         </div>
       </div>
     </>
