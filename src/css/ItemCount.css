@@ -3,7 +3,9 @@
   color:white;
   padding: 5px;
   border: none;
-  border-radius: 5px; }
+  border-radius: 5px; 
+  font-size: 13px;
+}
 
 .card .btn:hover {
   background-color: greenyellow; 

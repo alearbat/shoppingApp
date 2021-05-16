@@ -16,7 +16,7 @@ export const CartItem = (props) => {
         </div>
         <div className="col-lg-4 col-md-4 col-sm-4 col-12">
           <p>{qty}</p>
-          <button className="remove" onClick={() => removeItems(id)}>Remove</button>
+          <button className="button" onClick={() => removeItems(id)}>Remove</button>
         </div>
         <div className="col-lg-2 col-md-2 col-sm-2 col-12">
          <h2>$ {totalPrice(price, qty)}</h2>
@@ -25,16 +25,7 @@ export const CartItem = (props) => {
     </>
   )
 }
-// <section class="shopping-bg">
-//     <h1 className="title">Tu carrito de compras</h1>
-//     <div class="row d-flex justify-content-center product">
-//       <div className="col-lg-12 col-md-12 col-xs-12 col-12">
-//<p className="noItem">Aun no has agregado productos</p>
-//</div>
-//       <!--List of products selected-->
-//       <ul id="selectedProductsContainer" class="col-xl-12 col-md-12 col-sm-12 col-12"> 
-//       </ul>
-//       
+
 //       <!--Cart buttons-->
 //       <div class="d-flex justify-content-center col-lg-12 col-7">
 //         <button type="button" class="emptyCart btn btn-secondary col-lg-2 col-md-4 col-sm-6 col-12" style="display:none">Vaciar Carrito</button>
