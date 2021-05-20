@@ -1,5 +1,7 @@
 e-commerce PLANT-AR
 
+![Screenshot](ScreenShot_plant-ar.png)
+
 Este sitio web consta de 5 secciones:
 - Home (con carrousel)
 - Productos (catalogo con posibilidad de filtrar por categoria)
