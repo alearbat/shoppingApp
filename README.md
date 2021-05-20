@@ -1,7 +1,7 @@
 e-commerce PLANT-AR
 
 <p style="align:center">
-  <img src="./public/images/ScreenShot_plant-ar.png" width="350" title="screenshot">
+  <img src="./public/images/ScreenShot_plant-ar.png" width="600" title="screenshot">
 </p>
 
 Este sitio web consta de 5 secciones:
