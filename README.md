@@ -1,6 +1,8 @@
 e-commerce PLANT-AR
 
-![Screenshot](ScreenShot_plant-ar.png)
+<p style="align:center">
+  <img src="./images/ScreenShot_plant-ar.png" width="350" title="screenshot">
+</p>
 
 Este sitio web consta de 5 secciones:
 - Home (con carrousel)
