@@ -1,4 +1,4 @@
-e-commerce PLANT-AR
+e-commerce PLANT-AR - React
 
 <p style="align:center">
   <img src="./public/images/ScreenShot_plant-ar.png" width="600" title="screenshot">
