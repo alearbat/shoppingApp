@@ -28,3 +28,13 @@
 .fin-stock {
   font-size: 10px;
 }
+
+.product-added {
+  display:flex;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  color:rgb(0, 121, 16);
+}

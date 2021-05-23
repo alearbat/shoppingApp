@@ -7,7 +7,6 @@ const ItemDetailContainer = () => {
 
   const [Item, setItem] = useState({})
   const {id} = useParams()
-  const [added, setAdded] = useState(false);
 
 
   useEffect(()=>{
@@ -135,7 +134,7 @@ const ItemDetailContainer = () => {
     <>
       <div className="container-fluid">
         <div className="row justify-content-center">
-            {Item && Item.id ? <ItemDetail Item={Item} added={added} setAdded={setAdded}/> : <Spinner className="spinner" animation="border" variant="success" />}
+            {Item && Item.id ? <ItemDetail Item={Item}/> : <Spinner className="spinner" animation="border" variant="success" />}
         </div>
       </div>
     </>

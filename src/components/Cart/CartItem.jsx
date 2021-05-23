@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useShoppingCart } from '../../context/cartContext';
 import '../../css/Cart.css'
+import { Link } from 'react-router-dom'
 
 export const CartItem = (props) => {
 
@@ -10,9 +11,9 @@ export const CartItem = (props) => {
   return(
     <>
       <div className="row d-flex align-items-center">
-        <img className="image-product col-lg-2 col-md-2 col-sm-2 col-6" src={image} alt="Imagen del producto"/>
+      <img className="image-product col-lg-2 col-md-2 col-sm-2 col-6" src={image} alt="Imagen del producto"/>
         <div className="col-lg-4 col-md-4 col-sm-12 col-12">
-          <h2>{code} - {name}</h2>
+        <Link to={`/item/${id}`}><h2>{code} - {name}</h2></Link>
         </div>
         <div className="col-lg-3 col-md-3 col-sm-3 col-6">
           <p>{qty}</p>
