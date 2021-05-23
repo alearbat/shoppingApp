@@ -1,6 +1,6 @@
 e-commerce PLANT-AR
 
-<p style="align:center">
+<p>
   <img src="./public/images/ScreenShot_plant-ar.png" width="600" title="screenshot">
 </p>
 
