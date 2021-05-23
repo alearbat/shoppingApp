@@ -39,6 +39,7 @@ export const ShoppingCart = ({children}) => {
     // if the item doesn't exist, add item and quant to cart
     } else {
       setCartItems([...cartItems, {...item, qty: quant}])
+      setEmpty(false)
     }
   }
   console.log(cartItems)
@@ -52,7 +53,10 @@ export const ShoppingCart = ({children}) => {
   }
 
   // Clear all items in cart
-  const clearItems = () => setCartItems([])
+  const clearItems = () => {
+    setCartItems([])
+    setEmpty(true)
+  }
 
   // Get Units to show in CartWidget
   const getUnits = () => {

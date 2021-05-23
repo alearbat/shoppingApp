@@ -9,12 +9,12 @@ const CartWidget = () => {
 
   return(
     <>
-      <div className="cart-button">
-        <img className="cart" src={logo} alt="cart"/>
-        <p>MI CARRITO</p>
-        <p className="cart-units">{getUnits()}</p>
-      </div>
-      
+      { !empty &&
+        <div className="cart-button">
+          <img className="cart" src={logo} alt="cart"/>
+          <p className="cart-units">{getUnits()}</p>
+        </div>
+      }
     </>
   )
 }

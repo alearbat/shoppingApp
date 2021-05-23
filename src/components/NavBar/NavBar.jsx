@@ -38,7 +38,7 @@ const NavBar = () => {
           </NavDropdown>
           <NavLink to={`/servicios`}>SERVICIOS</NavLink>
           <NavLink to={`/contacto`}>CONTACTO</NavLink>
-          <NavLink to={`/carrito`}><CartWidget/></NavLink>
+          <NavLink className="cart-button" to={`/carrito`}>MI CARRITO<CartWidget/></NavLink>
         </Nav>
         </Navbar.Collapse>
       </Navbar>
