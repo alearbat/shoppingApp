@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useShoppingCart } from '../../context/cartContext';
 import '../../css/Cart.css'
 
 export const CartItem = (props) => {
 
-  const {code, id, image, price, qty, stock, name, totalPrice} = props;
+  const {code, id, image, price, qty, name, totalPrice} = props;
   const {removeItems} = useShoppingCart();
 
   return(

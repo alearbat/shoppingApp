@@ -5,7 +5,7 @@ export const CartContext = React.createContext([]);
 export const ShoppingCart = ({children}) => {
 
   const [cartItems, setCartItems] = useState([])
-  const [empty, setEmpty] = useState([false])
+  const [empty, setEmpty] = useState([true])
 
   // check if the item is in cart
   const isInCart = (id) => {
@@ -58,7 +58,7 @@ export const ShoppingCart = ({children}) => {
   const getUnits = () => {
     const units = cartItems.reduce((a,b)=>(a + b.qty),0)
     if (units == 0) {
-      setEmpty(false)
+      setEmpty(true)
     }
     return units;
   }

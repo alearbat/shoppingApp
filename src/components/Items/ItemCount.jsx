@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../css/ItemCount.css'
 
-const ItemCount = ({stockTotal, unitsToBuy, sum, subtract, onAdd, status}) => {
+const ItemCount = ({ stockTotal, unitsToBuy, sum, subtract, onAdd, status, hideButton }) => {
 
   return (
     <>
@@ -13,7 +13,7 @@ const ItemCount = ({stockTotal, unitsToBuy, sum, subtract, onAdd, status}) => {
       <div>
         <p className="fin-stock">{status}</p>
       </div>
-      <button className='btn' onClick={onAdd}>Agregar al carrito</button>
+      {!hideButton && <button className='btn' onClick={onAdd}>Agregar al carrito</button>}
     </>
   )
 }

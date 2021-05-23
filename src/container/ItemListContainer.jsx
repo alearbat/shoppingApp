@@ -8,6 +8,7 @@ import { Spinner } from 'react-bootstrap'
 const ItemListContainer = () => {
   const [arrayItems, setArrayItems] = useState([])
   const {category} = useParams()
+
   let itemsToShow = []
 
   useEffect(()=>{

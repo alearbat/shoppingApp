@@ -5,7 +5,7 @@ import '../../css/Item.css'
 
 const Item = ({ product })=> {
 
-  const { id, image, name, code, price, stock } = product;
+  const { id, image, name, code, price} = product;
 
   return (
     <>
@@ -15,7 +15,7 @@ const Item = ({ product })=> {
         <div>{name}</div>
         <div>$ {price}</div>
         <div>
-          <ItemCountContainer id={id} stock={stock} Item={product}/>
+          <ItemCountContainer Item={product}/>
         </div>
       </div>
     </>

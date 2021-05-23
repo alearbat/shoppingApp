@@ -30,3 +30,16 @@
 .cart {
   height: 30px;
 }
+
+.cart-button {
+  display: flex;
+}
+
+.cart-units {
+  margin: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: green;
+  color: white;
+}

@@ -12,7 +12,7 @@ const ItemDetail = ({Item, added, setAdded}) => {
               <h2>{Item.code} - {Item.name}</h2>
               <p className="description">{Item.description}</p>
               <h2>$ {Item.price}</h2>
-              <ItemCountContainer id={Item.id} stock={Item.stock} Item={Item} added={added} setAdded={setAdded}/>
+              <ItemCountContainer Item={Item} added={added} setAdded={setAdded} inDetail/>
             </div>
           </div>
     </>
