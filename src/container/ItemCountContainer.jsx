@@ -75,7 +75,6 @@ const ItemCountContainer = ({ Item, hideButton, inDetail }) => {
           subtract={subtract}
           status={status}
           onAdd={onAdd}
-          hideButton={hideButton}
         />
       }
     </>
