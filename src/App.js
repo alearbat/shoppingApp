@@ -20,7 +20,7 @@ function App() {
             <NavBar/>
           </header>
           <Switch>
-              <Route path="/productos/:category">
+              <Route path="/productos/:categoryId">
                 <section className="App-container"> 
                   <ItemListContainer/>
                 </section>
