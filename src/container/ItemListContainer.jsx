@@ -1,34 +1,36 @@
-import React, {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom'
-import ItemList from '../components/Items/ItemList.jsx'
-import '../css/ItemListContainer.css'
-import { Spinner } from 'react-bootstrap'
-import { getFirestore } from '../firebase'
+import React, {useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom';
+import ItemList from '../components/Items/ItemList.jsx';
+import '../css/ItemListContainer.css';
+import ErrorPage from '../components/ErrorPage.jsx'
+import { Spinner } from 'react-bootstrap';
+import { getFirestore } from '../firebase';
 
 const ItemListContainer = () => {
-  const [arrayItems, setArrayItems] = useState([])
+  const [arrayItems, setArrayItems] = useState([]);
   const [loading, setLoading] = useState(false);
-  const {categoryId} = useParams()
+  const [notFound, setNotFound] = useState(false);
+  const {categoryId} = useParams();
 
-  let itemsToShow = []
+  let itemsToShow = [];
 
   useEffect(() => {
-    setLoading(true)
-    const db = getFirestore()
-    const itemsCollection = db.collection("items")
+    setLoading(true);
+    const db = getFirestore();
+    const itemsCollection = db.collection("items");
     itemsCollection.get()
       .then((querySnapShot) => {
         if (querySnapShot.size === 0) {
-          console.log('No data!')
+          setNotFound(true);
         }
         const queryItems = querySnapShot.docs.map((doc) => {
-          return { id: doc.id, ...doc.data()}
+          return { id: doc.id, ...doc.data()};
         })
-        setArrayItems(queryItems)
+        setArrayItems(queryItems);
       })
       .catch((err)=>console.log("Se produjo un error", err))
       .finally(()=>setLoading(false))
-  },[])
+  },[]);
 
   categoryId ?
     itemsToShow = arrayItems.filter(i => i.categoryId === `${categoryId}`)
@@ -45,8 +47,14 @@ const ItemListContainer = () => {
           </div>
         </div>
         <div className="row justify-content-center">
-            { loading && <Spinner className="spinner" animation="border" variant="success" />}
-            { !loading && <ItemList products={itemsToShow}/>}
+          { notFound ? 
+            <ErrorPage/> 
+          :  
+            loading ? 
+              <Spinner className="spinner" animation="border" variant="success" /> 
+            : 
+              <ItemList products={itemsToShow}/>
+          }
         </div>
       </div>
     </>
