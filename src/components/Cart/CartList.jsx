@@ -8,7 +8,7 @@ export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
   return(
     <>
       <div className="shopping-bg">
-        <div style={{ display: cartItems.length == 0 ? "none" : "block" }}  >
+        <div style={{ display: cartItems.length === 0 ? "none" : "block" }}  >
           {cartItems.map((cartItem) =>
           <div key={cartItem.id}>
             <CartItem {...cartItem} totalPrice={totalPrice}/>
@@ -18,8 +18,8 @@ export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
         <hr style={{display: !cartItems.length ? "none" : "block"}}/>
          {/* Cart total */}
         <div className="row d-flex justify-content-center" style={{display: cartItems.length && "none"}}> 
-          <h6 className="col-xl-12 col-md-12 col-sm-12" style={{ display: cartItems.length != 0 ? "none" : "block" }}>Aun no tienes productos en el carrito</h6>
-          <Link to={'/productos'}><button className="btn col-lg-12 col-md-12 col-xs-12 col-12" style={{display: cartItems.length != 0 ? "none" : "inline" }}>Ir a catalogo</button></Link>
+          <h6 className="col-xl-12 col-md-12 col-sm-12" style={{ display: cartItems.length !== 0 ? "none" : "block" }}>Aun no tienes productos en el carrito</h6>
+          <Link to={'/productos'}><button className="btn col-lg-12 col-md-12 col-xs-12 col-12" style={{display: cartItems.length !== 0 ? "none" : "inline" }}>Ir a catalogo</button></Link>
           <h6 className="col-xl-2 col-md-2 col-sm-3" style={{display: !cartItems.length ? "none" : "block"}}>TOTAL</h6>
           <h6 id="totalPrice" className="price col-xl-2 col-md-2 col-sm-3" style={{display: !cartItems.length ? "none" : "block"}}>$ {finalPrice}</h6>
         </div>

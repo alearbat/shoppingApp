@@ -42,7 +42,6 @@ export const ShoppingCart = ({children}) => {
       setEmpty(false)
     }
   }
-  console.log(cartItems)
 
   // Remove item in cart
   const removeItems = (item) => {
@@ -61,7 +60,7 @@ export const ShoppingCart = ({children}) => {
   // Get Units to show in CartWidget
   const getUnits = () => {
     const units = cartItems.reduce((a,b)=>(a + b.qty),0)
-    if (units == 0) {
+    if (units === 0) {
       setEmpty(true)
     }
     return units;

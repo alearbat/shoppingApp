@@ -18,16 +18,17 @@ const ItemListContainer = () => {
     const itemsCollection = db.collection("items")
     itemsCollection.get()
       .then((querySnapShot) => {
-        const documents = querySnapShot.docs.map((doc) => {
+        if (querySnapShot.size === 0) {
+          console.log('No data!')
+        }
+        const queryItems = querySnapShot.docs.map((doc) => {
           return { id: doc.id, ...doc.data()}
         })
-        setArrayItems(documents)
+        setArrayItems(queryItems)
       })
       .catch((err)=>console.log("Se produjo un error", err))
       .finally(()=>setLoading(false))
   },[])
-
-  console.log(arrayItems)
 
   categoryId ?
     itemsToShow = arrayItems.filter(i => i.categoryId === `${categoryId}`)
