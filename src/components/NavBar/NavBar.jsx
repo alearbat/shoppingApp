@@ -1,6 +1,6 @@
 import React from 'react'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import './NavBar.css'
+import '../../css/NavBar.css'
 import logo from '../../assets/plant-ar.jpg'
 import backgroundImage from '../../assets/vertical2.jpg'
 import CartWidget from './CartWidget'

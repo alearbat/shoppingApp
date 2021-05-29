@@ -1,15 +1,15 @@
 import './css/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './container/ItemListContainer'
-import ItemDetailContainer from './container/ItemDetailContainer'
-import CartListContainer from './container/CartListContainer'
-import Home from './components/Home'
-import Footer from './components/Footer'
-import Services from './components/Services'
-import Contact from './components/Contact'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { ShoppingCart } from './context/cartContext'
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './container/ItemListContainer';
+import ItemDetailContainer from './container/ItemDetailContainer';
+import CartListContainer from './container/CartListContainer';
+import Home from './components/Home';
+import Footer from './components/Footer';
+import Services from './components/Services';
+import Contact from './components/Contact';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { ShoppingCart } from './context/cartContext';
 
 function App() {
   return (

@@ -1,9 +1,15 @@
-import React from 'react'
-import { CartItem } from './CartItem'
-import '../../css/Cart.css'
-import { Link } from 'react-router-dom' 
+import React, { useState} from 'react';
+import { CartItem } from './CartItem';
+import '../../css/Cart.css';
+import { Link } from 'react-router-dom'; 
+import { Modal } from 'react-bootstrap';
+import { CheckOutContainer } from '../../container/CheckOutContainer';
 
 export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return(
     <>
@@ -26,8 +32,17 @@ export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
         <hr style={{display: !cartItems.length ? "none" : "block"}}/>
         <div>
           <button className="vaciar col-lg-5 col-md-5 col-xs-5 col-11" onClick={clearItems} style={{display: !cartItems.length && "none"}}>Vaciar carrito</button>
-          <Link to={'/'}><button className="button col-lg-5 col-md-5 col-xs-5 col-11" style={{display: !cartItems.length && "none"}}>Finalizar compra</button></Link>
+          <button type="button" className="button col-lg-5 col-md-5 col-xs-5 col-11" variant="primary" onClick={handleShow} style={{display: !cartItems.length && "none"}}>Finalizar compra</button>
         </div>
+        <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} aria-labelledby="contained-modal-title-vcenter"
+      centered>
+          <Modal.Header closeButton>
+            <Modal.Title>Finaliza tu compra</Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="subtitle">
+            <CheckOutContainer finalPrice={finalPrice}/>
+          </Modal.Body>
+        </Modal>
       </div>
     </>
   )

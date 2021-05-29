@@ -76,5 +76,3 @@ export const ShoppingCart = ({children}) => {
 export const useShoppingCart = () => {
   return React.useContext(CartContext)
 }
-
-// en el contexto tengo que almacenar cuantos items tengo elegidos y esa info la consumo desde el item y desde el item detail
