@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './container/ItemListContainer';
 import ItemDetailContainer from './container/ItemDetailContainer';
 import CartListContainer from './container/CartListContainer';
+import AdminPanelContainer from './container/AdminPanelContainer';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import Services from './components/Services';
@@ -45,6 +46,9 @@ function App() {
             </Route>
             <Route path="/contacto">
               <Contact/>
+            </Route>
+            <Route path="/adminPanel">
+              <AdminPanelContainer/>
             </Route>
             <Route path="/"> {/* Como default al final para que caiga en home si hay un error*/}
               <Home />

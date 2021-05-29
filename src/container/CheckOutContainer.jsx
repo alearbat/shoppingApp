@@ -13,14 +13,13 @@ export const CheckOutContainer = ({ finalPrice }) => {
   const { cartItems, clearItems } = useShoppingCart(); 
 
   const handleInput = (e) => {
-    const { name, value } = e.target;
-    setBuyer({ ...buyer, [name]: value });
-
-    const form = e.currentTarget;
+    const { name, value, form } = e.target;
+    
     if (form.checkValidity() === false) {
       e.preventDefault();
       e.stopPropagation();
     }
+    setBuyer({ ...buyer, [name]: value });
     setValidated(true);
   };
 

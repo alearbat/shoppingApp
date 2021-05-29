@@ -1,8 +1,8 @@
-import React, { useState , useEffect} from 'react'
-import ItemCount from '../components/Items/ItemCount'
-import '../css/ItemCount.css'
-import { useShoppingCart } from '../context/cartContext'
-import { Link } from 'react-router-dom'
+import React, { useState , useEffect} from 'react';
+import ItemCount from '../components/Items/ItemCount';
+import '../css/ItemCount.css';
+import { useShoppingCart } from '../context/cartContext';
+import { Link } from 'react-router-dom';
 
 // checkCart returns how many units this item has in cart
 // function checkCart (cartItems =[], id) {
@@ -16,28 +16,28 @@ import { Link } from 'react-router-dom'
 const ItemCountContainer = ({ Item, inDetail }) => {
 
   const { addItem, isInCart } = useShoppingCart(); 
-  //const unitsAlreadyAdded = checkCart(cartItems, Item.id)
-  const [unitsToBuy, setUnitsToBuy] = useState(1)
-  const [stockTotal, setStockTotal] = useState(Item.stock - unitsToBuy)
-  const [status, setStatus] = useState()
+  //const unitsAlreadyAdded = checkCart(cartItems, Item.id);
+  const [unitsToBuy, setUnitsToBuy] = useState(1);
+  const [stockTotal, setStockTotal] = useState(Item.stock - unitsToBuy);
+  const [status, setStatus] = useState();
 
 
   const sum = () => {
     if(stockTotal > 0) {
-      setUnitsToBuy(unitsToBuy + 1)
-      setStockTotal(stockTotal - 1)
+      setUnitsToBuy(unitsToBuy + 1);
+      setStockTotal(stockTotal - 1);
     } 
   }
 
   const subtract = () => {
     if (unitsToBuy > 1) {
-      setUnitsToBuy(unitsToBuy - 1)
-      setStockTotal(stockTotal + 1)
+      setUnitsToBuy(unitsToBuy - 1);
+      setStockTotal(stockTotal + 1);
     } 
   }
 
   const onAdd = () => {
-    addItem(Item, unitsToBuy)
+    addItem(Item, unitsToBuy);
   }
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const ItemCountContainer = ({ Item, inDetail }) => {
       setStatus(`Solo quedan ${unitsToBuy} unidades en stock`)
       :
       setStatus('')
-  }, [stockTotal, unitsToBuy])
+  }, [stockTotal, unitsToBuy]);
 
   return (
     <>
