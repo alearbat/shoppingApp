@@ -7,6 +7,7 @@ export const AdminPanel = ({orders}) => {
     <>
       <table>
         <tr>
+          <th>Fecha</th>
           <th>Id de orden</th>
           <th>Nombre y Apellido</th>
           <th>Email</th>
@@ -15,7 +16,7 @@ export const AdminPanel = ({orders}) => {
           <th>Status</th>
         </tr>
       {orders.map((order) =>
-      <tr key={order.id}>
+      <tr className="order" key={order.id}>
         <Order order={order}/>  
       </tr>
       )}

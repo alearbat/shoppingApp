@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../css/orders.css';
 import { Modal, Button } from 'react-bootstrap';
+import moment from 'moment/dist/moment.js';
 
 export const Order = (order) => {
 
@@ -14,6 +15,7 @@ export const Order = (order) => {
   const tel = order.order.buyer.telefono
   const email = order.order.buyer.email
   const id = order.order.id
+  const fecha = moment(new Date(Date.now(order.order.date))).format('L');
   const code = order.order.items[0].code
   const pName = order.order.items[0].name
   const qty = order.order.items[0].qty  
@@ -22,6 +24,7 @@ export const Order = (order) => {
 
   return (
     <> 
+      <td>{fecha}</td>
       <td><button className="btn" variant="primary" onClick={handleShow}>{id}</button></td>
       <td>{name} {surname}</td>
       <td>{email}</td>
