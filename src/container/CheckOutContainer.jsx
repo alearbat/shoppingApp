@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 import { useShoppingCart } from '../context/cartContext';
 import { getFirestore } from '../firebase';
 import firebase from 'firebase/app'
@@ -52,11 +53,12 @@ export const CheckOutContainer = ({ finalPrice }) => {
   return (
     <>
       {id.length ? 
-        <div>
-          <p>Tu identificador de orden es:</p>
-          <span style={{ color: 'white', backgroundColor: 'black', fontSize: '20px', padding: '5px 8px'}}>{id}</span>
+        <div style={{ textAlign: 'center' }}>
+          <p>Tu identificador de orden es:</p><br/>
+          <p style={{ color: 'white', backgroundColor: 'black', fontSize: '20px', padding: '5px 8px'}}>{id}</p>
           <p style={{ marginTop: '20px' }}>Guarda este número para el seguimiento del pedido.</p>
           <p>En breve recibirás un mail con la confirmación del pedido, gracias por haber comprado en Plant-ar!</p>
+          <Link to="/"><button type="button" className="btn">Listo!</button></Link>
         </div>
       :
       <>
