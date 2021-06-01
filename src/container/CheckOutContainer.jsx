@@ -33,6 +33,7 @@ export const CheckOutContainer = ({ finalPrice }) => {
       items: cartItems,
       date: firebase.firestore.Timestamp.fromDate(new Date()),
       total: finalPrice,
+      status: "pendiente"
     };
 
     orders

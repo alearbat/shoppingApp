@@ -3,6 +3,7 @@ import { Order } from '../AdminPanel/Order'
 import '../../css/orders.css';
 
 export const AdminPanel = ({orders}) => {
+  
   return (
     <>
       <table>
