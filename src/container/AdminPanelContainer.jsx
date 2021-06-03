@@ -1,13 +1,17 @@
 import React, { useEffect, useState} from 'react'
-import { Spinner } from 'react-bootstrap';
+import { Spinner, Dropdown } from 'react-bootstrap';
 import { AdminPanel } from '../components/AdminPanel/AdminPanel';
 import ErrorPage from '../components/ErrorPage'
+import { useParams } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap'
 import { getFirestore } from '../firebase';
 
 const AdminPanelContainer = () => {
   const [loading, setLoading] = useState(false);
   const [notFound, setNotFound] = useState(false);
   const [arrayOrders, setArrayOrders] = useState([]);
+  const {currentStatus} = useParams();
+  let itemsToShow = [];
 
   useEffect(() => {
     setLoading(true);
@@ -27,12 +31,36 @@ const AdminPanelContainer = () => {
       .finally(()=>setLoading(false))
   },[]);
 
+  currentStatus ?
+  itemsToShow = arrayOrders.filter(i => i.status === `${currentStatus}`)
+  :
+  itemsToShow = arrayOrders
+
   return (
 
     <div className="container-fluid">
       <div className="row justify-content-center">
         <div>
           <h1 className="title">ORDENES</h1> 
+        </div>
+        <div className="subtitle col-xl-12 col-md-12 col-xs-12 col-12">
+          <Dropdown>
+            <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+              FILTRAR
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <LinkContainer to="/adminPanel">
+                <Dropdown.Item>Todas</Dropdown.Item>
+              </LinkContainer>
+              <Dropdown.Divider />
+              <LinkContainer to="/adminPanel/entregado">
+                <Dropdown.Item>Ordenes entregadas</Dropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/adminPanel/pendiente">
+                <Dropdown.Item>Ordenes pendientes</Dropdown.Item>
+              </LinkContainer>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </div>
       <div className="row justify-content-center">
@@ -42,7 +70,7 @@ const AdminPanelContainer = () => {
           loading ? 
             <Spinner className="spinner" animation="border" variant="success" /> 
           : 
-            <AdminPanel orders={arrayOrders}/> 
+            <AdminPanel orders={itemsToShow}/> 
         }
       </div>
     </div>  

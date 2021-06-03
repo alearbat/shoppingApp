@@ -40,7 +40,6 @@ export const CheckOutContainer = ({ finalPrice }) => {
       .add(newOrder)
       .then(({ id }) => {
         setId(id);
-        console.log(id);
       })
       .catch((err) => {
         console.log(err);
