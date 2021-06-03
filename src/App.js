@@ -47,6 +47,9 @@ function App() {
             <Route path="/contacto">
               <Contact/>
             </Route>
+            <Route path="/adminPanel/:currentStatus">
+              <AdminPanelContainer/>
+            </Route>
             <Route path="/adminPanel">
               <AdminPanelContainer/>
             </Route>
