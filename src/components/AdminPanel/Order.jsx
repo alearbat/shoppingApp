@@ -12,7 +12,6 @@ export const Order = (order) => {
   const { id, buyer, date, items, status, total } = order.order;
   const [tempStatus, setTempStatus] = useState(status);
 
-  
   const db = getFirestore();
   const docRef = db.collection("orders").doc(id);
 
@@ -20,7 +19,7 @@ export const Order = (order) => {
     db.runTransaction((transaction) => {
       return transaction.get(docRef).then((doc) => {
         transaction.update(docRef, { status: "entregado"});
-        setTempStatus("entregado")
+        setTempStatus("entregado");
       });
     }).then(() => {
       console.log("Transaction successfully committed!");
@@ -33,7 +32,7 @@ export const Order = (order) => {
     db.runTransaction((transaction) => {
       return transaction.get(docRef).then((doc) => {
         transaction.update(docRef, { status: "pendiente"});
-        setTempStatus("pendiente")
+        setTempStatus("pendiente");
       });
     }).then(() => {
       console.log("Transaction successfully committed!");

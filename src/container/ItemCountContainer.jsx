@@ -81,4 +81,4 @@ const ItemCountContainer = ({ Item, inDetail }) => {
   )
 }
 
-export default ItemCountContainer
+export default ItemCountContainer;

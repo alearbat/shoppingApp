@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../css/NavBar.css';
-import logo from '../../assets/shopping-cart.webp'
-import { useShoppingCart } from '../../context/cartContext'
+import logo from '../../assets/shopping-cart.webp';
+import { useShoppingCart } from '../../context/cartContext';
 
 const CartWidget = () => {
 
@@ -19,4 +19,4 @@ const CartWidget = () => {
   )
 }
 
-export default CartWidget
+export default CartWidget;

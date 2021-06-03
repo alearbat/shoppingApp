@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 import { useShoppingCart } from '../../context/cartContext';
-import '../../css/Cart.css'
-import { Link } from 'react-router-dom'
+import '../../css/Cart.css';
+import { Link } from 'react-router-dom';
 
 export const CartItem = (props) => {
 
   const {code, id, image, price, qty, name, totalPrice} = props;
   const {removeItems} = useShoppingCart();
 
-  return(
+  return (
     <>
       <div className="row d-flex align-items-center">
       <img className="image-product col-lg-2 col-md-2 col-sm-2 col-6" src={image} alt="Imagen del producto"/>

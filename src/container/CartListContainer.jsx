@@ -1,9 +1,9 @@
-import React from 'react'
-import { CartList } from '../components/Cart/CartList.jsx'
-import { useShoppingCart } from '../context/cartContext'
-import { Spinner } from 'react-bootstrap'
-import '../css/Cart.css'
-import whatsapp from '../assets/whatsapp.svg'
+import React from 'react';
+import { CartList } from '../components/Cart/CartList.jsx';
+import { useShoppingCart } from '../context/cartContext';
+import { Spinner } from 'react-bootstrap';
+import '../css/Cart.css';
+import whatsapp from '../assets/whatsapp.svg';
 
 const CartListContainer = () => {
 
@@ -12,7 +12,7 @@ const CartListContainer = () => {
   // Calculate total price of an item
   const totalPrice = (price, qty) => {
     const totalPrice = price * qty;
-    return totalPrice
+    return totalPrice;
   }
 
   // Calculate the final price of the purchase
@@ -24,7 +24,6 @@ const CartListContainer = () => {
     })
     return price;
   }
-  
 
   return ( 
     <>
@@ -36,13 +35,13 @@ const CartListContainer = () => {
           </div>
         </div>
         <div className="row fixed d-flex justify-content-end btn-whatsapp">
-            <a className="col-xl-1 col-md-1 col-sm-2 col-3" href="https://api.whatsapp.com/send?phone=541167958390" target="_blank" rel="noreferrer">
-              <img className="whatsapp" src={whatsapp} alt="whatsapp"/>
-            </a>
-          </div>
+          <a className="col-xl-1 col-md-1 col-sm-2 col-3" href="https://api.whatsapp.com/send?phone=541167958390" target="_blank" rel="noreferrer">
+            <img className="whatsapp" src={whatsapp} alt="whatsapp"/>
+          </a>
+        </div>
       </div>
     </>
   )
 }
 
-export default CartListContainer
+export default CartListContainer;

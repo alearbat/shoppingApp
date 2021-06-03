@@ -14,7 +14,7 @@ export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
   return(
     <>
       <div className="shopping-bg">
-        <div style={{ display: cartItems.length === 0 ? "none" : "block" }}  >
+        <div style={{ display: cartItems.length === 0 ? "none" : "block" }}>
           {cartItems.map((cartItem) =>
           <div key={cartItem.id}>
             <CartItem {...cartItem} totalPrice={totalPrice}/>
@@ -34,8 +34,14 @@ export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
           <button className="vaciar col-lg-5 col-md-5 col-xs-5 col-11" onClick={clearItems} style={{display: !cartItems.length && "none"}}>Vaciar carrito</button>
           <button type="button" className="button col-lg-5 col-md-5 col-xs-5 col-11" variant="primary" onClick={handleShow} style={{display: !cartItems.length && "none"}}>Finalizar compra</button>
         </div>
-        <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} aria-labelledby="contained-modal-title-vcenter"
-      centered>
+        <Modal 
+          show={show} 
+          onHide={handleClose} 
+          backdrop="static" 
+          keyboard={false} 
+          aria-labelledby="contained-modal-title-vcenter"
+          centered>
+            
           <Modal.Header closeButton>
             <Modal.Title>Finaliza tu compra</Modal.Title>
           </Modal.Header>

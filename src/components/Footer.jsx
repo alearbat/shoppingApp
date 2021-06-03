@@ -1,6 +1,6 @@
-import React from 'react'
-import logo from '../assets/plant-ar.jpg'
-import '../css/footer.css'
+import React from 'react';
+import logo from '../assets/plant-ar.jpg';
+import '../css/footer.css';
 
 const Footer = () => {
 
@@ -22,4 +22,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;

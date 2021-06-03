@@ -1,10 +1,11 @@
-import { React, useState } from 'react'
-import { Carousel } from 'react-bootstrap'
-import FirstSlide from '../assets/indoor-vertical-garden.jpg'
-import SecondSlide from '../assets/vertical-garden-window.jpg'
-import ThirdSlide from '../assets/balcones.jpg'
+import { React, useState } from 'react';
+import { Carousel } from 'react-bootstrap';
+import FirstSlide from '../assets/indoor-vertical-garden.jpg';
+import SecondSlide from '../assets/vertical-garden-window.jpg';
+import ThirdSlide from '../assets/balcones.jpg';
 
 function ControlledCarousel() {
+
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -29,7 +30,6 @@ function ControlledCarousel() {
           src={SecondSlide}
           alt="Second slide"
         />
-
         <Carousel.Caption>
           <h3>Nuestros diseños requieren <strong>cero</strong> mantenimiento.</h3>
         </Carousel.Caption>
@@ -40,7 +40,6 @@ function ControlledCarousel() {
           src={ThirdSlide}
           alt="Third slide"
         />
-
         <Carousel.Caption>
           <h3>Diseños personalizados <br/>para cada necesidad.</h3>
         </Carousel.Caption>
@@ -49,4 +48,4 @@ function ControlledCarousel() {
   );
 }
 
-export default ControlledCarousel
+export default ControlledCarousel;

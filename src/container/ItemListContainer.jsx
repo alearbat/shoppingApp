@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../components/Items/ItemList.jsx';
 import '../css/ItemListContainer.css';
-import ErrorPage from '../components/ErrorPage.jsx'
+import ErrorPage from '../components/ErrorPage.jsx';
 import { Spinner } from 'react-bootstrap';
 import { getFirestore } from '../firebase';
 
@@ -61,4 +61,4 @@ const ItemListContainer = () => {
   )
 }
 
-export default ItemListContainer
+export default ItemListContainer;

@@ -1,5 +1,5 @@
-import React from 'react'
-import '../css/Services.css'
+import React from 'react';
+import '../css/Services.css';
 
 const Services = () => {
 
@@ -16,4 +16,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Services;

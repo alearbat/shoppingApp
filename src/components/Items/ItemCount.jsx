@@ -1,5 +1,5 @@
-import React from 'react'
-import '../../css/ItemCount.css'
+import React from 'react';
+import '../../css/ItemCount.css';
 
 const ItemCount = ({ stockTotal, unitsToBuy, sum, subtract, onAdd, status }) => {
 
@@ -18,4 +18,4 @@ const ItemCount = ({ stockTotal, unitsToBuy, sum, subtract, onAdd, status }) => 
   )
 }
 
-export default ItemCount
+export default ItemCount;

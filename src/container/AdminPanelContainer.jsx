@@ -1,12 +1,13 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState} from 'react';
 import { Spinner, Dropdown } from 'react-bootstrap';
 import { AdminPanel } from '../components/AdminPanel/AdminPanel';
-import ErrorPage from '../components/ErrorPage'
+import ErrorPage from '../components/ErrorPage';
 import { useParams } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap';
 import { getFirestore } from '../firebase';
 
 const AdminPanelContainer = () => {
+
   const [loading, setLoading] = useState(false);
   const [notFound, setNotFound] = useState(false);
   const [arrayOrders, setArrayOrders] = useState([]);
@@ -77,4 +78,4 @@ const AdminPanelContainer = () => {
   )
 }
 
-export default AdminPanelContainer
+export default AdminPanelContainer;

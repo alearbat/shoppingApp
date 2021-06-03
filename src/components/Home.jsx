@@ -1,5 +1,5 @@
-import { React } from 'react'
-import Carousel from './Carousel'
+import { React } from 'react';
+import Carousel from './Carousel';
 
 
 const Home = () => {
@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <>
       <Carousel/>
-   </>
+    </>
   )
 }
 
-export default Home
+export default Home;

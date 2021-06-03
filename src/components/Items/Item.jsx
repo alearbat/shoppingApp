@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import ItemCountContainer from '../../container/ItemCountContainer'
-import '../../css/Item.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ItemCountContainer from '../../container/ItemCountContainer';
+import '../../css/Item.css';
 
-const Item = ({ product })=> {
+const Item = ({ product }) => {
 
   const { id, image, name, code, price} = product;
 
@@ -22,4 +22,4 @@ const Item = ({ product })=> {
   )
 }
 
-export default Item
+export default Item;

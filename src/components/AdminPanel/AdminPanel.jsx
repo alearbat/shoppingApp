@@ -1,8 +1,8 @@
 import React from 'react';
-import { Order } from '../AdminPanel/Order'
+import { Order } from '../AdminPanel/Order';
 import '../../css/orders.css';
 
-export const AdminPanel = ({orders}) => {
+export const AdminPanel = ({ orders }) => {
   
   return (
     <>

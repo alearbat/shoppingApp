@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { useShoppingCart } from '../context/cartContext';
 import { getFirestore } from '../firebase';
-import firebase from 'firebase/app'
+import firebase from 'firebase/app';
 
 
 export const CheckOutContainer = ({ finalPrice }) => {
@@ -52,7 +52,7 @@ export const CheckOutContainer = ({ finalPrice }) => {
 
   return (
     <>
-      {id.length ? 
+      { id.length ? 
         <div style={{ textAlign: 'center' }}>
           <p>Tu identificador de orden es:</p><br/>
           <p style={{ color: 'white', backgroundColor: 'black', fontSize: '20px', padding: '5px 8px'}}>{id}</p>
