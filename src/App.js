@@ -13,6 +13,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { ShoppingCart } from './context/cartContext';
 
 function App() {
+  
   return (
     <BrowserRouter>
       <div className="App">
@@ -53,7 +54,7 @@ function App() {
             <Route path="/adminPanel">
               <AdminPanelContainer/>
             </Route>
-            <Route path="/"> {/* Como default al final para que caiga en home si hay un error*/}
+            <Route path="/">
               <Home />
             </Route>
           </Switch>

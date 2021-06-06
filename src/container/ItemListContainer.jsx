@@ -7,11 +7,11 @@ import { Spinner } from 'react-bootstrap';
 import { getFirestore } from '../firebase';
 
 const ItemListContainer = () => {
+
   const [arrayItems, setArrayItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const [notFound, setNotFound] = useState(false);
   const {categoryId} = useParams();
-
   let itemsToShow = [];
 
   useEffect(() => {

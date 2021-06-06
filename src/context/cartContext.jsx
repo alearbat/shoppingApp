@@ -71,5 +71,5 @@ export const ShoppingCart = ({children}) => {
 }
 
 export const useShoppingCart = () => {
-  return React.useContext(CartContext)
+  return React.useContext(CartContext);
 }

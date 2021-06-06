@@ -4,26 +4,16 @@ import '../css/ItemCount.css';
 import { useShoppingCart } from '../context/cartContext';
 import { Link } from 'react-router-dom';
 
-// checkCart returns how many units this item has in cart
-// function checkCart (cartItems =[], id) {
-//   const inCart = cartItems.find(x => x.id === id)
-//     if (inCart !== undefined) {
-//       return inCart.qty 
-//     }
-//     return 0
-//}
-
 const ItemCountContainer = ({ Item, inDetail }) => {
 
   const { addItem, isInCart } = useShoppingCart(); 
-  //const unitsAlreadyAdded = checkCart(cartItems, Item.id);
   const [unitsToBuy, setUnitsToBuy] = useState(1);
   const [stockTotal, setStockTotal] = useState(Item.stock - unitsToBuy);
   const [status, setStatus] = useState();
 
 
   const sum = () => {
-    if(stockTotal > 0) {
+    if (stockTotal > 0) {
       setUnitsToBuy(unitsToBuy + 1);
       setStockTotal(stockTotal - 1);
     } 

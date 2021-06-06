@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Modal } from 'react-bootstrap';
 import { CheckOutContainer } from '../../container/CheckOutContainer';
 
-export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
+export const CartList = ({ cartItems, totalPrice, clearItems, finalPrice }) => {
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
