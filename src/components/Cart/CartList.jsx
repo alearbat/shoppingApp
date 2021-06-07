@@ -40,8 +40,7 @@ export const CartList = ({ cartItems, totalPrice, clearItems, finalPrice }) => {
           backdrop="static" 
           keyboard={false} 
           aria-labelledby="contained-modal-title-vcenter"
-          centered>
-            
+          centered> 
           <Modal.Header closeButton>
             <Modal.Title>Finaliza tu compra</Modal.Title>
           </Modal.Header>

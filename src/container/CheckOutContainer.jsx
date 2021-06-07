@@ -24,7 +24,7 @@ export const CheckOutContainer = ({ finalPrice }) => {
     setValidated(true);
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     const db = getFirestore();
     const orders = db.collection('orders');
@@ -48,7 +48,23 @@ export const CheckOutContainer = ({ finalPrice }) => {
         setBuyer({});
         clearItems();
       });
-  };
+
+      const itemsToUpdate = db.collection('items').where(
+        firebase.firestore.FieldPath.documentId(),
+        'in',
+        cartItems.map((i) => i.id)
+      );
+      const query = await itemsToUpdate.get();
+      const batch = db.batch();
+
+      query.docs.forEach((docSnapshot, idx) => {
+        if (docSnapshot.data().stock >= cartItems[idx].qty) {
+          batch.update(docSnapshot.ref, { stock: docSnapshot.data().stock - cartItems[idx].qty });
+          batch.commit().then(r => r);
+        }
+      },
+    );
+  }
 
   return (
     <>
