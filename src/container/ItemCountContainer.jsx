@@ -31,7 +31,10 @@ const ItemCountContainer = ({ Item, inDetail }) => {
 
   useEffect(() => {
     stockTotal === 0 ?
-      setStatus(`Solo quedan ${unitsToBuy} unidades en stock`)
+      unitsToBuy === 1 ?
+        setStatus(`Solo queda ${unitsToBuy} unidad en stock`)
+        :  
+        setStatus(`Solo quedan ${unitsToBuy} unidades en stock`)
       :
       setStatus('')
   }, [stockTotal, unitsToBuy]);
