@@ -38,3 +38,13 @@
   height: 50px;
   color:rgb(0, 121, 16);
 }
+
+.out-stock {
+  font-size: 13px;
+  color: gray;
+  border-radius: 10px;
+  border-top: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  padding:10px;
+  margin: 65px 5px 5px 5px;
+}

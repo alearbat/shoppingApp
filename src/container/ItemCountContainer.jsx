@@ -11,7 +11,6 @@ const ItemCountContainer = ({ Item, inDetail }) => {
   const [stockTotal, setStockTotal] = useState(Item.stock - unitsToBuy);
   const [status, setStatus] = useState();
 
-
   const sum = () => {
     if (stockTotal > 0) {
       setUnitsToBuy(unitsToBuy + 1);
@@ -39,7 +38,13 @@ const ItemCountContainer = ({ Item, inDetail }) => {
 
   return (
     <>
-      {isInCart (Item.id) ?
+    { Item.stock === 0 ?
+    <>
+      <p className="out-stock">SIN STOCK</p>
+    </>
+    :
+    <>
+      { isInCart (Item.id) ?
         inDetail ?
           <>
             <div className="product-added">
@@ -57,7 +62,7 @@ const ItemCountContainer = ({ Item, inDetail }) => {
               <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
             </svg></p>
           </div>    
-        : 
+      : 
         <ItemCount
           stockTotal={stockTotal}
           unitsToBuy={unitsToBuy}
@@ -67,6 +72,8 @@ const ItemCountContainer = ({ Item, inDetail }) => {
           onAdd={onAdd}
         />
       }
+    </>
+    }
     </>
   )
 }

@@ -5,7 +5,7 @@ import '../../css/Item.css';
 
 const Item = ({ product }) => {
 
-  const { id, image, name, code, price} = product;
+  const { id, image, name, code, price } = product;
 
   return (
     <>
