@@ -55,9 +55,9 @@ export const CheckOutContainer = ({ finalPrice }) => {
         cartItems.map((i) => i.id)
       );
       const query = await itemsToUpdate.get();
-      const batch = db.batch();
 
       query.docs.forEach((docSnapshot, idx) => {
+        const batch = db.batch();
         if (docSnapshot.data().stock >= cartItems[idx].qty) {
           batch.update(docSnapshot.ref, { stock: docSnapshot.data().stock - cartItems[idx].qty });
           batch.commit().then(r => r);
