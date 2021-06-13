@@ -2,23 +2,23 @@
 
 ![PLANT-AR](public/images/screenRecPlant-ar.gif)
 
-This website has 6 main sections:
+## This website has 6 main sections:
 - Home (with carrousel)
 - Productos (product catalog with filters by category)
 - Servicios (Plant-ar's services description)
 - Contacto (Contact form)
 - Carrito (Shopping cart/ check-out)
-- Admin Panel
+- Admin Panel (List of pending and sent orders)
 
 ## Downloaded Dependencies
 
-[Firebase](https://firebase.google.com/).\
+[Firebase](https://firebase.google.com/)\
 Firestore is the database to storage the products of the store and the orders received (identified by ID).
 
-[React-Router-Dom](https://reactrouter.com/web/guides/quick-start).\
+[React-Router-Dom](https://reactrouter.com/web/guides/quick-start)\
 This library contains the DOM bindings for React Router which enables the creation of dinamics routes for better navigation.
 
-[React Bootstrap](https://react-bootstrap.github.io/).\
+[React Bootstrap](https://react-bootstrap.github.io/)\
 React-Bootstrap replaces the Bootstrap JavaScript. Each component has been built from scratch as a true React component, without unneeded dependencies. It helped to create responsive websites faster.
 
 ## Implemented hooks
